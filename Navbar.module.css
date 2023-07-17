@@ -1,0 +1,163 @@
+nav {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px 0 black;
+  align-items: center;
+  width: 95%;
+  height: 80px;
+  color: white;
+}
+
+nav h1 {
+  margin-left: 1rem;
+  font-family: cursive;
+  color: white;
+  white-space: nowrap;
+}
+
+nav .menuitems {
+  margin: 1rem;
+  position: relative;
+  right: 20px;
+  /* display: flex; */
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+}
+
+.menuitems .item {
+  margin: 0px 2rem 0px 1rem;
+  align-items: center;
+  display: flex;
+  font-weight: bold;
+  border-radius: 10px;
+  white-space: nowrap;
+}
+
+.link {
+  color: white;
+  text-decoration: none;
+  padding: 10px 5px;
+}
+
+i {
+  margin-right: 3px;
+}
+
+.link:hover {
+  background-color: white;
+  color: black;
+  transition: 0.5s ease-in-out;
+  border-radius: 10px;
+}
+
+.menuitems .mobilebtn {
+  border-radius: 10px;
+  padding: 5px 8px;
+  cursor: pointer;
+  background-color: transparent;
+  font-weight: bold;
+  border: none;
+  color: white;
+  display: none;
+}
+
+.mobilebtn:hover {
+  color: black;
+  background-color: cadetblue;
+}
+
+.menuitems .btn {
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  white-space: nowrap;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: transparent;
+  color: white;
+  border: none;
+}
+
+.btn:hover {
+  background-color: white;
+  color: black;
+  transition: 0.5s ease-in-out;
+}
+
+@media screen and (max-width: 850px) {
+  nav {
+    z-index: 99;
+  }
+
+  nav .menuitems {
+    /* margin: 1rem;  */
+    /* position: relative; */
+    /* right: 20px;  */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: aqua;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    opacity: 0;
+    align-items: center;
+    padding: 80px 0 30px 0;
+    margin: 0;
+
+    /* display: grid;
+    grid-template-columns: repeat(6, auto); */
+  }
+
+  nav .menuitems.active {
+    z-index: -1;
+    left: 0;
+    opacity: 1;
+  }
+
+  .link {
+    color: black;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 2rem;
+  }
+
+  .link:hover {
+    background-color: skyblue;
+    color: white;
+    transition: none;
+  }
+
+  .menuitems .btn {
+    display: none;
+  }
+
+  .menuitems .mobilebtn {
+    border-radius: 4px;
+    padding: 1.5rem;
+    cursor: pointer;
+    background-color: rgb(190, 138, 74);
+    font-weight: 700;
+    letter-spacing: 2px;
+    border: none;
+    color: white;
+    margin: auto;
+    display: block;
+    font-size: 1.2rem;
+    text-align: center;
+    width: 80%;
+  }
+
+  .mobilebtn:hover {
+    color: black;
+    background-color: lightgreen;
+  }
+}
